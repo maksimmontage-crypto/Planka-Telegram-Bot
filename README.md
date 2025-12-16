@@ -46,7 +46,7 @@ See .env.example for all available options. Key variables:
 ### 3. Running 
 
 ```bash
-python planka_bot.py
+python3 main.py
 ```
 
 ### 4. Docker Deployment 
