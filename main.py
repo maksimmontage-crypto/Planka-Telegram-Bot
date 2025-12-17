@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Planka Telegram Bot
+Planka Telegram Bot v0.9.0
 All configuration is loaded from .env file
 """
 
@@ -948,7 +948,7 @@ class PlankaBotService:
     def run(self):
         """Main loop"""
         logger.info("=" * 60)
-        logger.info(f"🤖 PLANKA BOT v2.0 (with DB migration)")
+        logger.info(f"🤖 PLANKA BOT v0.9.0 (with DB migration)")
         logger.info(f"📊 Boards in work: {len(self.boards_info)}")
         logger.info(f"⏰ Deadline checks: every {Config.DEADLINE_CHECK_INTERVAL} sec")
         logger.info(f"🔄 Change checks: every {Config.POLL_INTERVAL} sec")
