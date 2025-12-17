@@ -48,19 +48,3 @@ See .env.example for all available options. Key variables:
 ```bash
 python3 main.py
 ```
-
-### 4. Docker Deployment 
-
-```bash
-# Using Docker Compose
-docker-compose up -d
-
-# Using Docker directly
-docker build -t planka-bot .
-docker run -d --name planka-bot \
-  -v $(pwd)/.env:/app/.env:ro \
-  -v $(pwd)/data:/app/data \
-  --restart unless-stopped \
-  planka-bot
-```
-
