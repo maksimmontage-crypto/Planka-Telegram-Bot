@@ -16,24 +16,23 @@ A robust Telegram bot that sends notifications about new tasks, assignments, and
 ### 1. Installation
 
 ```bash
-git clone https://github.com/yourusername/planka-telegram-bot.git
-cd planka-telegram-bot
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+cd /opt/planka-telegram-bot
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
 ### 2. Configuration
 
 ```bash 
-cp .env.example .env
+nano .env 
 # Edit .env with your settings:
 # - Planka credentials
 # - Telegram bot token
 # - Board to chat mapping
 ```
 
-See .env.example for all available options. Key variables:
+See .env for all available options. Key variables:
 
     PLANKA_URL, PLANKA_USERNAME, PLANKA_PASSWORD - Planka API access
 
@@ -48,3 +47,7 @@ See .env.example for all available options. Key variables:
 ```bash
 python3 main.py
 ```
+
+### 4. Running in sytemd: 
+
+sudo nano /etc/systemd/system/planka-bot.service #systemd example included
