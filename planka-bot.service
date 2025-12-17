@@ -1,0 +1,17 @@
+[Unit]
+Description=Planka Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=your username
+WorkingDirectory=/opt/planka-telegram-bot
+Environment="PATH=/opt/planka-telegram-bot/venv/bin"
+ExecStart=/opt/planka-telegram-bot/venv/bin/python /opt/planka-telegram-bot/main.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
